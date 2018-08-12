@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    margin-top: 5vh;
+}
+
+h1 {
+    font-size: 36px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-weight: 400;    
+}
+
+.jumbotron {
+    background-image: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(123, 229, 255, 0.8)),
+    url(https://images.pexels.com/photos/34676/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 0;     
+}
+
+.btn-lg {
+    font-weight: 100;    
+}
+
+.display-4 {    
+    color: black;          
+}
+
+.btn-dark {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.rating-stars {   
+   direction: rtl;  
+}
+
+.rating-stars .reviews {
+    font-size: 12px;
+}
+
+.rating-stars a i {
+    color: lightgrey;
+    transition: 0.3s all;
+}
+
+.rating-stars a i:hover {
+    color: #f1c40f;
+}
+
+.r1:hover ~ a i  {
+    color: #f1c40f;
+}
+
+.r2:hover ~ a i {
+    color: #f1c40f;
+}
+
+.r3:hover ~ a i {
+    color: #f1c40f;
+}
+
+.r4:hover ~ a i {
+    color: #f1c40f;
+}
+
+.r5:hover ~ a i {
+    color: #f1c40f;
+}
+
+.nav-register {
+    float: right;
+}
+
+.navbar-light .navbar-nav .active>.nav-link:hover {
+    color: #007bff;
+}
+
+.nav-register > a {
+    margin-right: 10px;
+}
+
+.img-item {
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.comments {
+    margin: 0;    
+    padding: 0;
+    margin-bottom: 50px;    
+}
+
+.card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background-color: #fff;
+    opacity: 0.8;
+    animation: cardUp 2s ease;
+    line-height: 1;       
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    opacity: 1;     
+}
+
+.darker {
+    background-color: rgb(245, 245, 245);
+}
+
+#userCommentField {
+    height: 250px;
+}
+
+.comment-field {
+    padding: 5px;
+    margin-top: 0;
+    height:400px;
+    width:100%;
+    overflow:auto;
+    margin-bottom: 30px;    
+}
+
+.commentFieldTitle {
+    margin-left: 15px;
+    margin-top: 50px;    
+}
+
+.comment-field::-webkit-scrollbar { 
+    display: none; 
+}
+
+.comment1 img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+    
+}
+
+.comment1 img.right {
+    float: right;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+.comment1::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.comment-form {
+    padding: 0;    
+}
+
+.item-details > p > i {
+    color: green;    
+}
+
+.item-details .item-about {
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: normal;        
+}
+
+.item-details > p {
+    line-height: 14px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.item-price {
+    letter-spacing: 2px;
+}
+
+.container-main {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.breadcrumb {
+    background-color: white;
+}
+
+.nav-active {
+    font-weight: bold;
+}
+
+.card-deck {
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.card-footer {
+    text-align: right;
+}
+
+.card-footer > small {
+    text-align: right;
+}
+
+.price {
+    display: inline;
+}
+
+.userComment {
+    width: 60%;
+    margin: 1px;
+    margin-bottom: 5px;
+}
+
+@keyframes cardUp {
+    0% {
+        opacity: 0;        
+    }
+    
+    100% {
+        opacity: 1;
+    }    
+}
+
