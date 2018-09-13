@@ -15,12 +15,68 @@
 <body>
 
     <header class="container">
-        <section class="nav-register">
-            <button class="btn btn-light">Register</button>
-            <button class="btn btn-dark">Sign In</button>
-        </section>
+            <section class="nav-register">                
+                    <!-- Button trigger modal -->
+        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
+            Register
+        </button>
+      
+      <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">                
+                        <div class="modal-body">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Great to see you here!</h5>
+                            <form>
+                                <div class="form-group">                              
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Choose your username">                              
+                                </div>
+                                <div class="form-group">                              
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your firstname">
+                                </div>
+                                <div class="form-group">                              
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your lastname">
+                                </div>
+                                <div class="form-group">                              
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email adress">
+                                </div>                            
+                                <button type="submit" class="btn btn-secondary submitBtn">Create your account</button>
+                                <small id="emailHelp" class="form-text small">Already got an account? <a href="." data-toggle="modal" data-target="#exampleModalCenter1" data-dismiss="modal">Sign in here</a></small>
+                              </form>
+                        </div>            
+          </div>
+        </div>
+      </div>
+                    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter1">
+        Sign In
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">                
+                        <div class="modal-body">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Great to have you back!</h5>
+                            <form>
+                                <div class="form-group">                              
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="username">                              
+                                </div>
+                                <div class="form-group">                              
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="password">
+                                    <a href="#" id="resetBtn">Reset</a></small>
+                                </div>                                                       
+                                <button type="submit" class="btn btn-secondary submitBtn">Sign in to your account</button>
+                                <small id="emailHelp" class="form-text text-small">New here? <a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-dismiss="modal">Register</a></small>
+                              </form>
+                        </div>            
+          </div>
+        </div>
+      </div>
+            </section>
 
-        <h1>Gentics Mesh Demo</h1>
+        <img class="h1-icon" src="img/favicon.png"><h2 id="genticsTitle">GENTICS Mesh</h2>
+        <a href="index.html"><h1>Demo Application</a><small>powered by <a href="http://www.getmesh.io"><h3 class="d-inline">getmesh.io</h3></a></small></h1>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -38,8 +94,7 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Aircrafts</a>
                     </li>
-                </ul>
-                <a href='automobiles.html'><button type="button" class="btn btn-secondary">Back</button></a>
+                </ul>                
             </div>
         </nav>
     </header>
@@ -53,11 +108,11 @@
                 <li class="breadcrumb-item active" aria-current="page">
                     <a href="automobiles.html">Automobiles</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">Porsche</li>
+                <li class="breadcrumb-item active" aria-current="page">Mustang</li>
             </ol>
         </nav>
 
-        <a href="https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=40085e3ea5d8524b7518df890e4aa72d&auto=format&fit=crop&w=500&q=60">
+        <a href="img/cars/mustang.jpg">
             <img class="img-thumbnail float-right img-item" src="https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=40085e3ea5d8524b7518df890e4aa72d&auto=format&fit=crop&w=500&q=60"
                 alt="Mustang">
         </a>
@@ -160,6 +215,10 @@
 
 
     </main>
+
+    <footer class="container">
+        <a href="#" class="footerLink">Gentics Mesh Demo Application</a>|<a href="#" class="footerLink">Documentation</a>|<a href="#" class="footerLink">link a</a>|<a href="#" class="footerLink">link b</a>
+    </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

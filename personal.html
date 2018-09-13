@@ -6,74 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Automobiles</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="img/favicon.png">       
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header class="container">
-        <section class="nav-register">                
-            
-<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
-    Register
-</button>
-
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">                
-                <div class="modal-body">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Great to see you here!</h5>
-                    <form>
-                        <div class="form-group">                              
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Choose your username">                              
-                        </div>
-                        <div class="form-group">                              
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your firstname">
-                        </div>
-                        <div class="form-group">                              
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your lastname">
-                        </div>
-                        <div class="form-group">                              
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email adress">
-                        </div>                            
-                        <button type="submit" class="btn btn-secondary submitBtn">Create your account</button>
-                        <small id="emailHelp" class="form-text text-small">Already got an account? <a href="." data-toggle="modal" data-target="#exampleModalCenter1" data-dismiss="modal">Sign in here</a></small>
-                      </form>
-                </div>            
-  </div>
-</div>
-</div>
-
-<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter1">
-Sign In
-</button>
-
-
-<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">                
-                <div class="modal-body">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Great to have you back!</h5>
-                    <form>
-                        <div class="form-group">                              
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="username">                              
-                        </div>
-                        <div class="form-group">                              
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="password">
-                            <a href="#" id="resetBtn">Reset</a></small>
-                        </div>                                                       
-                        <button type="submit" class="btn btn-secondary submitBtn">Sign in to your account</button>
-                        <small id="emailHelp" class="form-text text-small">New here? <a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-dismiss="modal">Register</a></small>
-                      </form>
-                </div>            
-  </div>
-</div>
-</div>
-    </section>
+        <section class="nav-signedIn">
+          <span><p class="d-inline">Hello Andrea</p><i class="fas fa-user"></i></span>
+        </section>
         
         <img class="h1-icon" src="img/favicon.png"><h2 id="genticsTitle">GENTICS Mesh</h2>
-        <a href="index.html"><h1>Demo Application</a><small>powered by <a href="http://www.getmesh.io"><h3 class="d-inline">getmesh.io</h3></a></small></h1>  
+        <a href="index.html"><h1>Demo Application</a><small>powered by <a href="http://www.getmesh.io"><h3 class="d-inline">getmesh.io</h3></a></small></h1>    
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">                
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,23 +34,16 @@ Sign In
                     </li>
                     <li class="nav-item active">
                       <a class="nav-link" href="#">Aircrafts</a>
-                    </li>                     
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Spacecraft</a>
+                    </li>                      
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control form-search mr-sm-2" type="search" placeholder="Search" aria-label="Search" onfocus="searchUi()" onfocusout="closeSearchUi()">
-                    <div class="autocomplete d-none">
-                      <ul class="list-group">
-                        <li class="list-group-item">Tesla</li>            
-                        <li class="list-group-item">Mustang</li>            
-                        <li class="list-group-item">Porsche</li>            
-                      </ul>
-                    </div>                    
-                  </form>
-                                
-                                    
-                </div>                
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">                    
+                  </form>                  
+                </div>
         </nav>
-        
     </header>
     
     <main class="container container-main">
@@ -115,9 +53,6 @@ Sign In
                     <li class="breadcrumb-item active" aria-current="page">Automobiles</li>
                 </ol>
             </nav>
-
-        <!-- LIST ITEMS (CARDS) -->
-
         <div class="all-cards">
             <div class="card-deck">
                     <div class="card">
@@ -272,39 +207,15 @@ Sign In
                             </div>
                           </div>
             </div>
-
-            <!-- PAGINATION -->
-
-            <nav aria-label="...">
-              <ul class="pagination justify-content-center">
-                <li class="page-item">
-                  <a class="page-link" href="#" tabindex="-1">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
-                <li class="page-item"><a class="page-link" href="#">174</a></li>
-                <li class="page-item"><a class="page-link" href="#">175</a></li>
-                <li class="page-item active"><a class="page-link" href="#">176</a></li>
-                <li class="page-item"><a class="page-link" href="#">177</a></li>
-                <li class="page-item"><a class="page-link" href="#">178</a></li>                
-                <li class="page-item disabled"><a class="page-link" href="#">...</a></li>                
-                <li class="page-item"><a class="page-link" href="#">290</a></li>                
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
-                </li>
-              </ul>
-            </nav>
                       
         </main>
 
         <footer class="container">
           <a href="#" class="footerLink">Gentics Mesh Demo Application</a>|<a href="#" class="footerLink">Documentation</a>|<a href="#" class="footerLink">link a</a>|<a href="#" class="footerLink">link b</a>
-        </footer>
+      </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/popper.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 <script src="app/app.js"></script>
 </body>

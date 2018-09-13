@@ -3,6 +3,9 @@ const commentForm = document.querySelector('.comment-form');
 const submitBtn = document.querySelector('.btn.btn-primary.float-right');
 const commentField = document.querySelector('.comment-field');
 const userComment = document.querySelector('.userComment');
+const starreview = document.querySelector('.starReviews');
+
+//BASIC COMMENT
 
 submitBtn.addEventListener('click', function (e) {
     const div = document.createElement('div');
@@ -22,3 +25,12 @@ submitBtn.addEventListener('click', function (e) {
     e.preventDefault();
 
 });
+
+function openReview(e) {
+    starreview.classList.remove('d-none');
+}
+
+function closeReview(e) {
+    starreview.classList.add('d-none');
+}
+

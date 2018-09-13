@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Automobiles</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/app/nouislider.min.css">
     <link rel="icon" type="image/png" href="img/favicon.png">       
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,12 +15,12 @@
 
     <header class="container">
         <section class="nav-register">                
-            
+            <!-- Button trigger modal -->
 <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
     Register
 </button>
 
-
+<!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">                
@@ -44,12 +46,12 @@
   </div>
 </div>
 </div>
-
+            <!-- Button trigger modal -->
 <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter1">
 Sign In
 </button>
 
-
+<!-- Modal -->
 <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">                
@@ -100,24 +102,105 @@ Sign In
                         <li class="list-group-item">Porsche</li>            
                       </ul>
                     </div>                    
-                  </form>
-                                
-                                    
-                </div>                
+                  </form>                  
+                </div>
         </nav>
-        
     </header>
+  <div class="container searchBox row">
+    <div class="searchItems bg-light col-4">
+      <ol class="searchOl">Automobiles (56)
+        <li class="searchLi">subcategorie (23)</li>
+        <li class="searchLi">subcategorie (23)</li>
+      </ol>
+      <ol class="searchOl">Yachts (0)</ol>
+      <ol class="searchOl">Aircraft (1)</ol>        
+    </div>
+    <div class="searchFilter bg-light col-8">
+        <p class="searchLabel">You search for: <button class="btn btn-secondary filterItem"><i class="fas fa-times"></i>tesla</button><button class="btn btn-secondary filterItem"><i class="fas fa-times"></i>green</button><button class="btn btn-secondary filterItem"><i class="fas fa-times"></i>$3.000-$8.000</button></p>
+        <div class="searchDrops row">
+            <button class="btn btn-secondary col-5 dropdown-toggle" type="button" id="markeDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Marke</button>
+            <div class="dropdown-menu col-5" aria-labelledby="markeDrop">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control" id="dropSearch" type="search" placeholder="Marke" aria-label="Search"">                                        
+                </form>
+                <div class="dropdown-divider"></div>
+              <input type="checkbox"><p class="d-inline lieferItem dropdown-item">Tesla</p><span class="badge badge-primary lieferCount">2</span><br>  
+              <input type="checkbox"><p class="d-inline lieferItem dropdown-item">Mustang</p><span class="badge badge-primary lieferCount">7</span><br>  
+              <input type="checkbox"><p class="d-inline lieferItem dropdown-item">Ferrari</p><span class="badge badge-primary lieferCount">17</span><br>  
+              <input type="checkbox"><p class="d-inline lieferItem dropdown-item">Porsche</p><span class="badge badge-primary lieferCount">3</span><br>   
+            </div>
+            <div class="col-1"></div>
+            <div class="col-5 p-0 farbes">
+              <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="farbeDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Farbe</button>
+              <div class="dropdown-menu scrollable-menu w-100" aria-labelledby="farbeDrop">
+                <input type="checkbox" id="f1" class="d-none"><label for="f1" id="f1" class="d-block">Schwarz</label>
+                <input type="checkbox" id="f2"><label for="f2" id="f2" class="d-block">Braun</label>
+                <input type="checkbox" id="f3"><label for="f2" id="f3" class="d-block">Beige</label>
+                <input type="checkbox" id="f4"><label for="f2" id="f4" class="d-block">Grau</label>
+                <input type="checkbox" id="f5"><label for="f5" id="f5" class="d-block">Weiß</label>
+                <input type="checkbox" id="f6"><label for="f6" id="f6" class="d-block">Blau</label>
+                <input type="checkbox" id="f7"><label for="f7" id="f7" class="d-block">Petrol</label>
+                <input type="checkbox" id="f8"><label for="f8" id="f8" class="d-block">Türkis</label>
+                <input type="checkbox" id="f9"><label for="f9" id="f9" class="d-block">Grün</label>
+                <div class="dropdown-divider"></div>
+                <button class="btn saveBtn">Speichern</button>
+                
+              </div>
+            </div>  
+        </div>
+        <div class="searchDrops row">
+            <button class="btn btn-secondary col-5 dropdown-toggle" type="button" id="lieferDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lieferzeit</button>
+              <div class="dropdown-menu col-5" aria-labelledby="lieferDrop">
+                  <input type="checkbox"><p class="d-inline lieferItem dropdown-item">Sofort lieferbar</p><span class="badge badge-primary lieferCount">16</span><br>  
+                  <input type="checkbox"><p class="d-inline lieferItem dropdown-item">ca. 1-2 Wochen</p><span class="badge badge-primary lieferCount">2</span><br>  
+                  <input type="checkbox"><p class="d-inline lieferItem dropdown-item">ca. 2-3 Wochen</p><span class="badge badge-primary lieferCount">97</span><br>  
+                  <input type="checkbox"><p class="d-inline lieferItem dropdown-item">ca. 3-5 Wochen</p><span class="badge badge-primary lieferCount">22</span><br>  
+              </div>
+            <div class="col-1"></div>
+            <div class="col-5 p-0">
+            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="preisDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Preis</button>
+              <div class="dropdown-menu w-100" aria-labelledby="preisDrop">
+                  <div id="slider-snap" class="dropSlider d-none d-lg-block d-sm-none mt-2"></div>
+                  <div class="input-group mb-3 dropPrice">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text d-none d-lg-block d-sm-none">$</span>
+                      </div>
+                      <input type="text" class="form-control text-center" aria-label="Amount (to the nearest dollar)" placeholder="min">
+                      <input type="text" class="form-control text-center" aria-label="Amount (to the nearest dollar)" placeholder="max">
+                      <div class="input-group-append">
+                          <button class="btn btn-outline-primary d-none d-lg-block d-sm-none" type="button" id="button-addon2">OK</button>
+                        </div>
+                    </div>  
+              </div>  
+          </div>
+      </div>
+  </div>
     
     <main class="container container-main">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Automobiles</li>
+                    <li class="breadcrumb-item"><a href="automobiles.html">Automobiles</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Search</li>
                 </ol>
             </nav>
-
-        <!-- LIST ITEMS (CARDS) -->
-
+        <div class="searchLine row">
+          <div class="sortby col-6 mb-4 text-left">
+            <span class="resultCount">56</span> results
+          </div>
+          <div class="sortby col-6 mb-4 text-right">
+            Sort by: <div class="dropdown d-inline">
+              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Most popular
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Price ascending</a>
+                <a class="dropdown-item" href="#">Price descending</a>
+                <a class="dropdown-item" href="#">Shipping time</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="all-cards">
             <div class="card-deck">
                     <div class="card">
@@ -272,40 +355,40 @@ Sign In
                             </div>
                           </div>
             </div>
-
-            <!-- PAGINATION -->
-
+            
             <nav aria-label="...">
-              <ul class="pagination justify-content-center">
-                <li class="page-item">
-                  <a class="page-link" href="#" tabindex="-1">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
-                <li class="page-item"><a class="page-link" href="#">174</a></li>
-                <li class="page-item"><a class="page-link" href="#">175</a></li>
-                <li class="page-item active"><a class="page-link" href="#">176</a></li>
-                <li class="page-item"><a class="page-link" href="#">177</a></li>
-                <li class="page-item"><a class="page-link" href="#">178</a></li>                
-                <li class="page-item disabled"><a class="page-link" href="#">...</a></li>                
-                <li class="page-item"><a class="page-link" href="#">290</a></li>                
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
-                </li>
-              </ul>
-            </nav>
-                      
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                  <li class="page-item"><a class="page-link" href="#">174</a></li>
+                  <li class="page-item"><a class="page-link" href="#">175</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">176</a></li>
+                  <li class="page-item"><a class="page-link" href="#">177</a></li>
+                  <li class="page-item"><a class="page-link" href="#">178</a></li>                
+                  <li class="page-item disabled"><a class="page-link" href="#">...</a></li>                
+                  <li class="page-item"><a class="page-link" href="#">290</a></li>                
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            
         </main>
+
+        
 
         <footer class="container">
           <a href="#" class="footerLink">Gentics Mesh Demo Application</a>|<a href="#" class="footerLink">Documentation</a>|<a href="#" class="footerLink">link a</a>|<a href="#" class="footerLink">link b</a>
-        </footer>
+      </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/popper.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<script src="/app/nouislider.min.js"></script>
 <script src="app/app.js"></script>
 </body>
 </html>

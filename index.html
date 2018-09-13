@@ -10,14 +10,78 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
+  <!-- SIGN IN + REGISTER BUTTONS-->
 
     <header class="container">
         <section class="nav-register">                
-                <button class="btn btn-light">Register</button>
-                <button class="btn btn-dark">Sign In</button>
+  <!-- REGISTER BUTTON -->
+    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
+        Register
+    </button>
+  
+  <!-- REGISTER MODAL -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">                
+                    <div class="modal-body">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Great to see you here!</h5>
+                        <form>
+                            <div class="form-group">                              
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Choose your username">                              
+                            </div>
+                            <div class="form-group">                              
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your firstname">
+                            </div>
+                            <div class="form-group">                              
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your lastname">
+                            </div>
+                            <div class="form-group">                              
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email adress">
+                            </div>                            
+                            <button type="submit" class="btn btn-secondary submitBtn">Create your account</button>
+                            <small id="emailHelp" class="form-text text-small">Already got an account? <a href="." data-toggle="modal" data-target="#exampleModalCenter1" data-dismiss="modal">Sign in here</a></small>
+                          </form>
+                    </div>            
+      </div>
+    </div>
+  </div>
+  <!-- SIGN IN BUTTON -->
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter1">
+    Sign In
+  </button>
+  
+  <!-- SIGN IN MODAL -->
+  <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">                
+                    <div class="modal-body">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Great to have you back!</h5>
+                        <form>
+                            <div class="form-group">                              
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="username">                              
+                            </div>
+                            <div class="form-group">                              
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="password">
+                                <a href="#" id="resetBtn">Reset</a></small>
+                            </div>                                                       
+                            <button type="submit" class="btn btn-secondary submitBtn">Sign in to your account</button>
+                            <small id="emailHelp" class="form-text text-small">New here? <a href="#" data-toggle="modal" data-target="#exampleModalCenter" data-dismiss="modal">Register</a></small>
+                          </form>
+                    </div>            
+      </div>
+    </div>
+  </div>
         </section>
+
         
-        <h1>Gentics Mesh Demo</h1>
+
+    <!-- BRAND ICON + NAME-->
+        
+        <img class="h1-icon" src="img/favicon.png"><h2 id="genticsTitle">GENTICS Mesh</h2>
+        <a href="index.html"><h1>Demo Application</a><small>powered by <a href="http://www.getmesh.io"><h3 class="d-inline">getmesh.io</h3></a></small></h1>
+
+    <!-- NAVIGATION BAR-->
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">                
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,18 +100,31 @@
                     </li>                     
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">                    
+                    <input class="form-control form-search mr-sm-2" type="search" placeholder="Search" aria-label="Search" onfocus="searchUi()" onfocusout="closeSearchUi()">
+                    <div class="autocomplete d-none">
+                      <ul class="list-group">
+                        <li class="list-group-item">Tesla</li>            
+                        <li class="list-group-item">Mustang</li>            
+                        <li class="list-group-item">Porsche</li>            
+                      </ul>
+                    </div>                    
                   </form>
                 </div>
         </nav>
     </header>
 
+    <!-- CONTAINER WITH AN IMAGE / BACKGROUND + WRITING-->
+
     <main class="container container-main">        
         <div class="jumbotron">
             <h1 class="display-4">Gentics Mesh Demo Application</h1>                    
-            <a class="btn btn-dark btn-lg" href="https://getmesh.io/docs/beta/getting-started.html" role="button">Learn more</a>
+            <a class="btn" href="https://getmesh.io/docs/beta/getting-started.html" role="button">Learn more</a>
         </div>
     </main>
+
+    <footer class="container">
+        <a href="https://www.gentics.com" class="footerLink">www.gentics.com</a>|<a href="https://getmesh.io/docs/beta/" class="footerLink">Documentation</a>|<a href="#" class="footerLink">link a</a>|<a href="#" class="footerLink">link b</a>
+    </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
