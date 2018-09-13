@@ -65,6 +65,10 @@ a > h3 {
     display: none; 
 }
 
+.autocomplete::-webkit-scrollbar { 
+    display: none; 
+}
+
 .searchOl {
    margin-bottom: 0;
    margin-top: 7px;
@@ -205,9 +209,11 @@ label {
     position: absolute;
     top: 50px;
     width: 200px;
+    height: 175px;
     z-index: 1;
     display: inline-block;    
     list-style-type: none;
+    overflow-x: hidden;
 }
 
 .autocomplete ul li:hover {
@@ -436,6 +442,9 @@ i {
 }
 
 .progress {
+    margin-top: 3px;
+    margin-left: 0px;
+    padding-left: 0px;    
     margin-bottom: 5px;
     font-size: 10px;
     font-weight: 400;

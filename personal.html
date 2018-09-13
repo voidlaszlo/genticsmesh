@@ -40,7 +40,19 @@
                     </li>                      
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">                    
+                    <input class="form-control form-search mr-sm-2" type="search" placeholder="Search" aria-label="Search" onfocus="searchUi()" onfocusout="closeSearchUi()">
+                    <div class="autocomplete d-none">
+                      <ul class="list-group">
+                        <li class="list-group-item">Tesla</li>            
+                        <li class="list-group-item">Mustang</li>            
+                        <li class="list-group-item">Porsche</li>            
+                        <li class="list-group-item">Toyota</li>            
+                        <li class="list-group-item">Audi</li>            
+                        <li class="list-group-item">Ferrari</li>            
+                        <li class="list-group-item">Eminem</li>            
+                        <li class="list-group-item">Metallica</li>            
+                      </ul>
+                    </div>                    
                   </form>                  
                 </div>
         </nav>
@@ -80,7 +92,7 @@
                       </div>
                     </div>
                     <div class="card">
-                    <h5 class="card-title">Tesla</h5>
+                    <h5 class="card-title">Tesla<span class="float-right personal"><i class="fas fa-tag"></i><p class="d-inline">special</p></i></span></h5>
                       <img class="card-img-top" src="img/cars/tesla.jpg" alt="Card image cap">
                       <div class="card-body">
                     
